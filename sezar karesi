@@ -1,0 +1,31 @@
+#sezar karesine göre şifreleme
+
+
+a="sevmekistiyorumerkuttaçkın"#şifrelenecek girdi
+şifre_uzunluğu=len(a)
+satır_uzunluğu=int(len(a)**(1/2))# satır uzunluğu genel formüle göre şifre uzunluğuğun kareköküdür
+print(satır_uzunluğu)
+
+print(*a)
+
+matris=list(a)#her bir elemanı liste içinde yazmak için list kullandım
+şifre=[]
+n=0
+m=0
+while (n<satır_uzunluğu):
+    while m<(şifre_uzunluğu):
+        şifre.append(a[m])
+        m+=satır_uzunluğu
+ # matris olarak ele alırsak , satır uzunluğu indisini
+ #ele aldığımız herhangi bir indise eklemek bize değerin
+ # altındaki elemanı verir.
+    m=0   
+    n+=1
+    m=m+n
+    
+
+print(*şifre)
+
+    
+    
+     
