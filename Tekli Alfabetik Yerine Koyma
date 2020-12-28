@@ -1,0 +1,21 @@
+#TEK ALFABELİ YERİNE KOYMA ALGORİTMASI
+
+
+
+alfabe="a,b,c,ç,d,e,f,g,ğ,h,ı,i,j,k,l,m,n,o,ö,p,r,s,ş,t,u,ü,v,y,z,"
+
+şifrelenmiş_alfabe="d,e,f,g,ğ,h,ı,i,j,k,l,m,n,o,ö,p,r,s,ş,t,u,ü,v,y,z,a,b,c,ç,"
+
+girdi="üçüncütümenigüneydoğudoğrultusundageriçekin"
+
+girdi.strip()#şifrenin daha zor anlaşılabilmesi için boşluklardan arındırıyoruz
+
+uzunluk=len(girdi)
+a=0
+şifre=[]
+for n in range (0,uzunluk):
+    a=alfabe.index(girdi[n])
+    şifre.append(şifrelenmiş_alfabe[a])
+print(*girdi)
+print(*şifre)
+    
