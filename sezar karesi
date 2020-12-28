@@ -1,9 +1,9 @@
 #sezar karesine göre şifreleme
 
 
-a="sevmekistiyorumerkuttaçkın"#şifrelenecek girdi
+a="greatjobyougotit"#şifrelenecek girdi /çözülebilmesi için tam kare elemanlı olması gerekir
 şifre_uzunluğu=len(a)
-satır_uzunluğu=int(len(a)**(1/2))# satır uzunluğu genel formüle göre şifre uzunluğuğun kareköküdür
+satır_uzunluğu=int(len(a)**(1/2))# satır uzunluğu genel formüle göre şifre uzunluğunun kareköküdür
 print(satır_uzunluğu)
 
 print(*a)
@@ -26,6 +26,20 @@ while (n<satır_uzunluğu):
 
 print(*şifre)
 
+#şimdi de çözümünü yapalım
+i=0
+l=0
+yeni_a=[]
+while (i< satır_uzunluğu):
+    while l<(şifre_uzunluğu):
+        yeni_a.append(şifre[l])
+        l+=satır_uzunluğu
+
+    l=0
+    i+=1
+    l=l+i
+
+print(*yeni_a)
     
     
-     
+                
