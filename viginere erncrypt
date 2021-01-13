@@ -1,0 +1,19 @@
+def viginere(girdi,şifre):
+    alfabe="abcçdefgğhıijklmnoöprsştuüvyz"
+    alfabe=list(alfabe)
+    
+    girdi_liste=list(girdi)
+    şifre_liste=list(şifre)
+
+    sıra=[]
+    cevap=[]
+    for n in range (0,len(şifre)):
+        sıra.append(alfabe.index(şifre_liste[n]))
+    
+    for m in range (0,len(girdi)):
+        sıra_2=alfabe.index(girdi_liste[m])
+        sıra_genel=sıra_2+sıra[(m%len(şifre))]
+        cevap.append(alfabe[(sıra_genel)%29])
+
+    print(*girdi)
+    print(*cevap)
