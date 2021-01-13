@@ -4,6 +4,8 @@ def viginere(girdi,şifre):
     
     girdi_liste=list(girdi)
     şifre_liste=list(şifre)
+    yeni_girdi=[]
+    ciphertext_index=0
 
     sıra=[]
     cevap=[]
@@ -17,3 +19,11 @@ def viginere(girdi,şifre):
 
     print(*girdi)
     print(*cevap)
+
+
+    for l in range (0,len(cevap)):
+        ciphertext_index=alfabe.index(cevap[l])
+        cevap_indeksi=ciphertext_index-sıra[(l%len(şifre))]
+        yeni_girdi.append(alfabe[cevap_indeksi])
+
+    print(*yeni_girdi)        
