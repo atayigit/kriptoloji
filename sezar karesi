@@ -1,7 +1,7 @@
 #sezar karesine göre şifreleme
 
 
-a="greatjobyougotit"#şifrelenecek girdi /çözülebilmesi için tam kare elemanlı olması gerekir
+a="ardaçokiyibirinsan"#şifrelenecek girdi /çözülebilmesi için ttam kare elemanlı olması gerekir
 şifre_uzunluğu=len(a)
 satır_uzunluğu=int(len(a)**(1/2))# satır uzunluğu genel formüle göre şifre uzunluğunun kareköküdür
 print(satır_uzunluğu)
@@ -12,17 +12,28 @@ matris=list(a)#her bir elemanı liste içinde yazmak için list kullandım
 şifre=[]
 n=0
 m=0
+pop_mat=şifre_uzunluğu-(satır_uzunluğu**2)
+        
+
+
+
+
 while (n<satır_uzunluğu):
-    while m<(şifre_uzunluğu):
+    while m<(şifre_uzunluğu-pop_mat) :
         şifre.append(a[m])
         m+=satır_uzunluğu
  # matris olarak ele alırsak , satır uzunluğu indisini
  #ele aldığımız herhangi bir indise eklemek bize değerin
  # altındaki elemanı verir.
+
+
     m=0   
     n+=1
     m=m+n
-    
+for k in range(0,pop_mat):
+    şifre.append(a[şifre_uzunluğu-1-k]) 
+
+
 
 print(*şifre)
 
@@ -31,15 +42,15 @@ i=0
 l=0
 yeni_a=[]
 while (i< satır_uzunluğu):
-    while l<(şifre_uzunluğu):
+    while l<(şifre_uzunluğu-pop_mat):
         yeni_a.append(şifre[l])
         l+=satır_uzunluğu
 
     l=0
     i+=1
     l=l+i
+for k in range(pop_mat,0,-1):
+    yeni_a.append(a[şifre_uzunluğu-k]) 
+
 
 print(*yeni_a)
-    
-    
-                
